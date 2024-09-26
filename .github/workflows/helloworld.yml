@@ -1,0 +1,21 @@
+name: 1.0$(Rev:.r)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  helloworld:
+    name: Hello World!
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+      - name: Run Hello World! script
+        run: echo Hello, $name!
+        env:
+          name: Caleb
