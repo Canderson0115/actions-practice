@@ -1,4 +1,4 @@
-name: 1.0$GITHUB_RUN_NUMBER
+name: 1.0${{ env.GITHUB_RUN_NUMBER }}
 
 on:
   push:
